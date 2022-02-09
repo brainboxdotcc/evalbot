@@ -1,10 +1,12 @@
 # D++ Eval Bot
 
-This is a C++ code evaluation bot for experimenting with the [D++ library](https://dpp.dev). Please note that this bot is designed to be used only by one trusted developer as it provides full unrestricted access to the server it runs on via compiled code within the bot's memory space.
+This is a C++ code evaluation bot for experimenting with the [D++ library](https://dpp.dev). Please note that this bot is designed to be used only by the person who hosts the bot as it provides full unrestricted access to the server it runs on via compiled code within the bot's memory space.
 
 This may be considered by some to be a vulnerability. In the right hands of a responsible developer this is a fantastic tool for experimenting with the Discord API and D++ library.
 
 ## Compilation
+
+Configure your user ID in the file `evalbot/eval.h` by changing the value of `MY_DEVELOPER`. Note this can only be changed by a recompile and restart. This is by design as a security measure.
 
     mkdir build
     cd build
