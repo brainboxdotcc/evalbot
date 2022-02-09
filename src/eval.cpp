@@ -135,7 +135,13 @@ int main()
 			 * the cluster, and also a copy of the message_create_t.
 			 */
 			double run_start = dpp::utility::time_f();
-			std::string result = exec_run(bot, event);
+			std::string result;
+			try {
+				result = exec_run(bot, event);
+			}
+			catch (const std::exception& e) {
+				result = std::string("Exception: ") + e.what();
+			}
 			double run_time = dpp::utility::time_f() - run_start;
 
 			/* When we're done with a .so file we must always dlclose() it */
