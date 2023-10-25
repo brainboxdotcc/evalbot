@@ -4,8 +4,8 @@
  */
 
 #include <dpp/dpp.h>
-#include <dpp/nlohmann/json.hpp>
-#include <dpp/fmt/format.h>
+#include <dpp/json.h>
+#include <fmt/format.h>
 #include <fstream>
 #include <iostream>
 /* We have to define this to make certain functions visible */
